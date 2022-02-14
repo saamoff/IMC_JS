@@ -1,0 +1,103 @@
+#boxContent {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+#boxTitle {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 2%;
+}
+
+#boxSliders {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#boxSliders label {
+  font-size: 24px;
+}
+
+#boxSliders h1 {
+  font-size: 24px;
+  color: #F7B718;
+}
+
+#boxSliders input {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  border-radius: 5px;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+#boxSliders input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #F7B718;
+}
+
+#boxSliders input::-moz-range-thumb {
+  cursor: pointer;
+}
+
+#boxWeight {
+  margin: 5%;
+  display: flex;
+  width: 40%;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#boxWeight label{
+  flex-grow: 2;
+}
+
+#boxHeight {
+  margin: 5%;
+  display: flex;
+  width: 40%;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#boxHeight label{
+  flex-grow: 2;
+}
+
+#boxButton {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#boxButton button{
+  height: 60px;
+  width: 40%;
+  border: 0;
+  border-radius: 5px;
+  font-size: 35px;
+  background: #F7B718;
+  color: white;
+  margin-bottom: 3%;
+}
+
+#boxButton h1 {
+  font-size: 30px;
+  margin-bottom: 2%;
+}
