@@ -97,6 +97,10 @@
   margin-bottom: 3%;
 }
 
+#boxButton button:focus {
+  cursor: pointer;
+}
+
 #boxButton h1 {
   font-size: 30px;
   margin-bottom: 2%;
