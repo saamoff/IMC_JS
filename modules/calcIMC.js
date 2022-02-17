@@ -1,13 +1,24 @@
 export default function calcIMC() {
-  const weight = document.getElementById('#weight');
-  const height = document.getElementById('#height');
+  const weight = document.querySelector('#weight');
+  let weightValue = document.querySelector('#weightValue');
+  const height = document.querySelector('#height');
+  let heightValue = document.querySelector('#heightValue');
   const btnCalc = document.querySelector('#calcIMC');
-  let finalResult = document.querySelector('#results');
-  let imc;
+  let result = document.querySelector('#results');
+
+  weight.oninput = function () {
+    weightValue.innerHTML = weight.value;
+  }
+  height.oninput = function () {
+    heightValue.innerHTML = height.value;
+  }
 
   btnCalc.addEventListener('click', () => {
-    imc = (weight/Math.pow((height/100),2)).toFixed(1); 
-    finalResult.textContent = `IMC: ${imc}`
+    let heightCalc = height.value;
+    let weightCalc = weight.value;
+    let imc = (weightCalc/(heightCalc*heightCalc)).toFixed(1);
+    
+    let finalResult = ''
 
     if(imc < 18.5){
       finalResult = `IMC: ${imc} (Abaixo do Peso).`
@@ -27,5 +38,6 @@ export default function calcIMC() {
     }else{
       finalResult = `IMC: ${imc} (Obesidade Morbida).`
     };
+    result.textContent = finalResult
   })
 }
